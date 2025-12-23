@@ -1,104 +1,134 @@
-# WEEK 0: 
+# WEEK 0 — Python Basics
 
+## Functions
 
-## Functions:
-
-Action or verb that lets you do something in the program. The computer/language already knows how to do it, you just have to use it. 
+A **function** is an action (or verb) that lets you do something in a program. The computer or programming language already knows how to perform the action—you just need to use it.
 
 ```python
 print("Hello World")
-# here print is the function
+# print is the function
 ```
-the functions don't just do something random, they do what you ask for. This is called an **argument**, inside the `print()` we entered "Hello World", and it influences the results of the function. 
+Functions do exactly what you ask them to do. The value you pass inside the parentheses is called an argument, and it affects the result of the function.
 
 
-Asking questions to users using `input()`, it basically stops and asks users to type something. Nicely, `input()` takes in arguments so we can just ask our question insde of it. 
+## input()
 
+The **input()** function asks the user for input and pauses the program until something is typed.
 ```python
 input("What's your name? ")
 ```
-This just takes the users input but does nothing with it unless we try to use it. That's where we get `return values` and `variables`. We return the value we get from user and then use variable to store it. 
+This only collects the input. To use it, you must store it in a variable.
 
-Variable is like a container that stores data. 
+## Variables & Return Values
 
-## Comments:
+A variable is like a container that stores data.
+```python
+name = input("What's your name? ")
+```
+Here, input() returns a value and name stores that value so it can be reused.
 
-Comments (#) are like notes to yourself, computers ignores everything inside the comments.Comments are very useful to document your code. 
+## Comments
 
--------
+Comments start with #. The computer ignores them. They are used to document and explain code.
 
-``` Python 
-# one , in " " and the other , seperates arguments
+```python
+# This is a comment
+```
+
+## print() with Multiple Arguments
+
+```python
 print("Hello, ", name)
-#         OR 
-print("Hello, "+ name)
+# OR
+print("Hello, " + name)
 ```
 
-
-``` Python
+## print() Parameters
+```python
 print(*objects, sep=' ', end='\n')
-# These are technically the parameters, these are the things you can pass to a function. When you actually use them and pass in values, those inputs are called ARGUMENTS. 
-
 ```
 
-`sep` default value is a single blank spaces, `end` default value is \n.
+These are **parameters—placeholders** defined by the function. When you pass values to them, those values are called arguments.
 
-\n = new line, moves the cursor to the next line. You don't see it everytime because its just a default value. 
+Default values:
+- sep = ' ' (single space)
+- end = '\n' (new line)
 
-you CAN override the deault values for both sep and end. 
+`\n` moves the cursor to the next line. You can override both `sep` and `end`.
 
-## Types of Parameters:
+### Types of Parameters
 
-1.) Positional Parameters: First thing passes gets done first, second thing you passed gets passed second, 
+**1. Positional Parameters**
+The order matters. The first value goes to the first parameter, the second to the second parameter.
 
-2.) Named Parameters: examples are `sep` and `end`. 
+**2. Named Parameters**
+You explicitly specify the parameter name. Examples include sep and end.
 
+## Escape Characters
+Escape characters allow special characters to appear inside strings.
 
-## Escape Characters:
 ```python
 print("Hello, \"friend\"")
-continues the line in a new line. 
 ```
 
-## F-String:
-formats things in a string
-s
+Common escape characters:
+
+- ``\n - new line``
+
+## F-Strings
+
+F-strings allow you to format variables directly inside strings.
+
 ```python
 print(f"Hello, {name}")
 ```
+They are cleaner and easier to read than string concatenation.
 
-## String Methods:
-![String Methods](Week_0\images\image.png)s
+## String Methods
 
-`split()` Imagine if you ask for users name and people usually enter full name and you don't want to greet them by full name. You can use split to just greet them by their first name.
+String methods allow you to manipulate text stored in strings.
 
-``` Python
+**split()**
+
+If a user enters their full name and you only want the first name:
+```python
 first, last = name.split(" ")
-# first such occurance goes to first, and the other occurance goes to last. This totally depends on the order. 
 ```
-
-## Integer:
-Theres math so theres many symbols as well
-
-+, -, *, /, %
-
-% = modulous operator, the reminder you get after dividing one number from another. 
+The first occurrence goes into first, and the second goes into last. Assignment depends on order.
 
 
-## Float:
-Number but has decimal points. Float is not infinite entirely. 
+**Integers**
+Integers are whole numbers.
 
-## Round
+Math operators:
+- + addition
+- - subtraction
+- *  multiplication
+- / division
+- % modulus
+
+The modulus operator `(%)` returns the remainder after division.
+
+## Floats
+
+Floats are numbers with decimal points.
 
 ```python
-round(number[, ndigits])
-
-# Basically rounds to 2 digits by default and later you can specify till where you want to round. 
+3.14
 ```
+Floats are not infinitely precise.
 
-You can create your own functions! you can use `def` to create a function 
+## round()
+
+```
+round(number[, ndigits])
+```
+Rounds a number to the nearest value. By default, it rounds to the nearest whole number. You can specify how many decimal places using ndigits.
+
+## Defining Your Own Functions
+You can create your own functions using the ``def`` keyword.
 
 ```python
 def butt():
-  # bla bla bla
+    # function body
 ```
