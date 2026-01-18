@@ -13,8 +13,15 @@ def convert(camel_word_2):
     else:
       snake_word.append(char)
     snake_case_word = ''.join(snake_word)
-    print(snake_case_word)
+  print(snake_case_word)
 
 main()
 
-# enumerate 
+# THIS IS SO MUCH SIMPLER BRAH
+
+message = input("CamelCase: ")
+
+for letter in message:
+  if letter.upper():
+    message = message.replace(letter, "_" + letter.lower())
+print(message)

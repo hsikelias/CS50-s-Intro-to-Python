@@ -1,4 +1,7 @@
 # CS50 Python
+Assignments and notes I took from Harvard's CS50 Introduction to python course.
+
+**Course Link:** https://learning.edx.org/course/course-v1:HarvardX+CS50P+Python/home
 
 ## Course Content
 
