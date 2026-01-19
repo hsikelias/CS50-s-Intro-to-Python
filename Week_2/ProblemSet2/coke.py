@@ -6,14 +6,15 @@ amount_due = 50
 user_total = 0
 
 while amount_due > 0:
+    print(f"Amount Due: {amount_due}")
     user_cash = int(input("Insert Coin: "))
 
     match user_cash:
         case 5 | 10 | 25:
-            amount_due = amount_due - user_cash
-            print(f"Amount Due: {amount_due}")
+            amount_due -= user_cash
             user_total += user_cash
         case _:
-            amount_due 
-            print(f"Amount Due: {amount_due}")
-print((f"Change Owed: {user_total - 50}"))
+            pass
+
+change_owed = abs(amount_due)
+print((f"Change Owed: {change_owed}")) # user_cash - user_total
