@@ -7,21 +7,11 @@ def convert(camel_word_2):
 
   for int, char in enumerate(camel_word_2):
     if char.isupper():
-      if int > 0:
+      if int > 0: 
           snake_word.append('_')
       snake_word.append(char.lower())  
     else:
       snake_word.append(char)
     snake_case_word = ''.join(snake_word)
-  print(snake_case_word)
-
+    print(snake_case_word)
 main()
-
-# THIS IS SO MUCH SIMPLER BRAH
-
-message = input("CamelCase: ")
-
-for letter in message:
-  if letter.upper():
-    message = message.replace(letter, "_" + letter.lower())
-print(message)
