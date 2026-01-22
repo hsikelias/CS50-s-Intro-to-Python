@@ -20,9 +20,16 @@ def main():
 
 def is_valid(s):
     ...    
-    while does_start_with_two_leters == True and vanity_plate_length == True and numbers_in_middle == True and numbers_in_middle == True:
-        return True
-
+    if not does_start_with_two_leters(s):
+        return False
+    if not vanity_plate_length(s):
+        return False
+    if not numbers_in_end(s):
+        return False
+    if not no_space_no_period(s):
+        return False
+    
+    return True
 
 def does_start_with_two_leters():
     '''
@@ -34,9 +41,9 @@ def vanity_plate_length():
     Checks if the vanity plate lenght meets the min and max length requirement. Returns True if the word meets the requirement and false if not
     '''
 
-def numbers_in_middle():
+def numbers_in_end():
     '''
-    Checks if numbers are in the middle, returns False if they are and True if they aren't
+    Checks if numbers come at the end, anything after that should be a number as well. AAA222 is fine but AAA22A isn't. and first number used cannot be a 0 
     '''
 
 def no_space_no_period():
