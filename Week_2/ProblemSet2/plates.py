@@ -1,4 +1,4 @@
-# requesting license plate but one of the requirements should meet:
+# requesting license plate, valid plate only if all the requirements are meet:
 '''
 - plates must start with at least two letters
 - maximum 6 characters minimum 2 characters
@@ -17,9 +17,33 @@ def main():
     else:
         print("Invalid")
 
+
 def is_valid(s):
     ...    
-    if len(s) >=2 and len(s) <=6:
-        print("Valid")
-    elif 
+    while does_start_with_two_leters == True and vanity_plate_length == True and numbers_in_middle == True and numbers_in_middle == True:
+        return True
+
+
+def does_start_with_two_leters():
+    '''
+    Checks if the entered string is starting with at least two letters. Returns True if the word does start with two letters and false if not
+    '''
+
+def vanity_plate_length():
+    '''
+    Checks if the vanity plate lenght meets the min and max length requirement. Returns True if the word meets the requirement and false if not
+    '''
+
+def numbers_in_middle():
+    '''
+    Checks if numbers are in the middle, returns False if they are and True if they aren't
+    '''
+
+def no_space_no_period():
+    '''
+    Checks for any space/period and other fancy stuff in the plate. Returns False if there is space or any punctuation marks, returns True if there isn't any punctuation marks. 
+    '''
+
+
+
 main()
