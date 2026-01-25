@@ -20,7 +20,7 @@ def main():
 
 def is_valid(s):
     ...    
-    if not does_start_with_two_leters(s):
+    if not does_start_with_two_letters(s):
         return False
     if not vanity_plate_length(s):
         return False
@@ -31,14 +31,14 @@ def is_valid(s):
     
     return True
 
-def does_start_with_two_leters():
+def does_start_with_two_letters():
     '''
     Checks if the entered string is starting with at least two letters. Returns True if the word does start with two letters and false if not
     '''
 
 def vanity_plate_length():
     '''
-    Checks if the vanity plate lenght meets the min and max length requirement. Returns True if the word meets the requirement and false if not
+    Checks if the vanity plate length meets the min and max length requirement. Returns True if the word meets the requirement and false if not
     '''
 
 def numbers_in_end():
