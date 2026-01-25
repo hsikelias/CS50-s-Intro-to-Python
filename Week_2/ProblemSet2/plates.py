@@ -56,14 +56,3 @@ def no_space_no_period():
 main()
 
 
-
-
-1. I use Instagram a lot, I upload my own content in this app and also consume other creator's content for inspiration but sometimes I get too distracted when I'm supposed to be studying. When I notice this pattern repeating, I deliberately turn on focus mode to block apps like instagram and use a pomodoro when studying. So, I didn't find it too hard to unplug from instagram. 
-
-2. I wasn't able to stay unplugged for the full 24 hours. In my opinion, It doesn't really matter because my goal is to stay away from these apps when I'm doing tasks like studying or programming that require focus. As I said earlier, I use instagram for content creation so I had to use it for that reason. 
-
-3. The positives were that I was able to complete my assignments early,  I had so much free time left for my personal plans. I didn't find any negative effects of being unplugged from instagram. 
-
-4. My addiction to technology is definitely not in a problematic level, I am able to complete my assignments before deadlines, manage time for my hobbies, self study and personal life. I just tend to get distracted when I'm doing something that requires large amount of my brain power, I slip up and do something that's less painful to do. But, I quickly realize what I'm doing and I turn it off immediately. I don't get distracted again for a long time, if i do I just quit everything and stare at the wall. I measure my level of addiction based on how much time I waste in my focus sessions, that is what matters to me the most. 
-
-5. Technology helped me to stay connected with my closed one with the help of digital com
