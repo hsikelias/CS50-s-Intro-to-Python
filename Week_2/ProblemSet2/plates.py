@@ -66,5 +66,3 @@ def no_space_no_period(s):
             return False
     return True 
 main()
-
-
