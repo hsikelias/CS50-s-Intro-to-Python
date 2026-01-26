@@ -10,12 +10,10 @@ correct_text_list = list(correct_text)
 
 for char in correct_text_list:
     if char == "0":
-        print("Invalid")
         zero_index = (correct_text_list.index(char))
         print(zero_index)
         break
     elif char in numbers:
-        print("non 0 number found")
-        print(char)
+        if char.isalpha():
     else:
-        print("Number Not 0")
+        print("Number Not 0"

@@ -23,7 +23,7 @@ def is_valid(s):
     '''
     Basically takes all the trues and falses from different functins and uses them to determine wether the plate is valid or not. 
    '''
-    if does_start_with_two_letters(s) == True and vanity_plate_length(s) == True and no_space_no_period(s) == True and numbers_in_end(s) == True:
+    if does_start_with_two_letters(s) == True and vanity_plate_length(s) == True and no_space_no_period(s) == True:
         print("Valid")
     else:
         print("Invalid")
