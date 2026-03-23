@@ -8,7 +8,6 @@ def main():
     verify_input(fraction)
 
 def verify_input(fraction):
-    """ verifies if the entered input is in x /y format and if x and y are integers"""
 
     if fraction.count("/") == 1:
         split_fraction = fraction.split('/') # [5,6]
@@ -60,9 +59,6 @@ def fraction_answer(x,y):
     if x > y:
         print("X is greater than Y, X should be smaller than Y")
         main()
-   #  elif y == 0:
-     #   print("Y can't be 0, try again")
-      #  main()
 
 
 def get_percentage(answer):
@@ -71,8 +67,10 @@ def get_percentage(answer):
 
 main()
 
-
-# Tests
 '''
-input of -1/4 results in reprompt, needs to reject
+Mistakes in my method:
+
+1. too much use of recursions, main() is called so many times to reprompt.. USE WHILE LOOP
+2. in many places I called main() and then raised a valueError or anything.. but main() moves the program to the function.. so the exceptions are never raised.
+3. unecessary checks on some functions that make no sense to be there.
 '''
