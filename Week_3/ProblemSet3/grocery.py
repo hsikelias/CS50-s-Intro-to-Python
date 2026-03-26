@@ -11,11 +11,10 @@ def main():
             EOFError
             break
 
-    for item in item_list:
+    for item in sorted(item_list):
         if item not in used:
             item_count = item_list.count(item)
             print(f"{item_count} {item}")
             used.append(item)
-
 
 main()
