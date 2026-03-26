@@ -24,72 +24,80 @@ months = [
 ]
 
 def main():
-  date = input("Date: ")
-  date_verification(date)
+    while True:
+        try:
+            date = input("Date: ").strip()
+            month, day, year = parse_date(date)  
+            validate_date(month, day)            
+            print(f"{year:04d}-{month:02d}-{day:02d}")
+            break
+        except ValueError as e:
+            pass                                  
 
-def date_verification(date):
-  """
-  splits the input given by the user and verifies entries on a basic level before moving to output processing.
-  """
-  while True:
+def parse_date(date):
+
     if date.count("/") == 2:
-      split_date = date.split("/")
-      month, day, year = split_date
-
-      try:
-        int_month = int(month)
-      except ValueError:
-        pass
-      try:
-        int_day = int(day)
-      except ValueError:
-        pass
-      try:
-        int_year = int(year)
-      except ValueError:
-        pass
-    
-      date_verification_level2(int_month,int_day,int_year)
-    exit()
-
-    if date.count(" ") ==2:
-      split_date = date.split(" ")
-      month, day_withcoma, year = split_date
-
-      char_to_remove = ","
-      day = day_withcoma.replace(char_to_remove, "")    
-
-      try:
-        titled_month = month.title()
-      except Exception:
-        pass
-      if month in months:
-        try:
-          int_day = int(day)
-        except ValueError:
-          pass
-        try:
-          int_year = int(year)
-        except ValueError:
-          pass
-
-        date_verification_level2(titled_month,int_day,int_year)
+        return parse_numeric(date)
+    elif date.count(" ") == 2:
+        return parse_worded(date)
     else:
-      break
+        raise ValueError("Unrecognized format")
 
-def date_verification_level2(month, day, year):
+def parse_numeric(date):
+    month_str, day_str, year_str = date.split("/")
+    month, day, year = int(month_str), int(day_str), int(year_str)  
+    return month, day, year
 
-  if day > 31:
-    raise Exception("Day's can't be greater than 31") 
+def parse_worded(date):
+    month_str, day_str, year_str = date.split(" ")
+    month_str = month_str.title()
+    day_str = day_str.replace(",", "")
+
+    if month_str not in months:
+        raise ValueError(f"Unknown month: {month_str}")
+
+    month = months.index(month_str) + 1    
+    day = int(day_str)                     
+    year = int(year_str)
+    return month, day, year
+
+def validate_date(month, day):
+    if not 1 <= month <= 12:
+        raise ValueError("Month out of range")
+    if not 1 <= day <= 31:
+        raise ValueError("Day out of range")
 
 main()
 
 """
-1. input 9/8/1636 should output 1636-09-08
+:) input of 9/8/1636 outputs 1636-09-08
 
-2. input September 8, 1636 should output 1636-09-08
+:( input of September 8, 1636 outputs 1636-09-08
+    expected: "...636-09-08"
+    actual:   "...636-08-08\n"
 
-3. input 32/6/1912 should output a reprompt 
+:) input of 10/9/1701 outputs 1701-10-09
 
-4. input December 80, 1980 should output a reprompt
+:( input of October 9, 1701 outputs 1701-10-09
+    expected: "1701-10-09"
+    actual:   "1701-09-09..."
+
+:) input of " 9/8/1636 " outputs 1636-09-08
+
+:( input of 23/6/1912 results in reprompt
+    expected program to reject input, but it did not
+
+:) input of 10 December, 1815 results in reprompt
+
+:( input of October/9/1701 results in reprompt
+    expected program to reject input, but it did not
+
+:( input of 1/50/2000 results in reprompt
+    expected program to reject input, but it did not
+
+:( input of December 80, 1980 results in reprompt
+    expected program to reject input, but it did not
+
+:( input of September 8 1636 results in reprompt
+    expected program to reject input, but it did not
 """
