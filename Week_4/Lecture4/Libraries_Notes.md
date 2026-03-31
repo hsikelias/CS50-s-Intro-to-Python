@@ -28,27 +28,13 @@ coin = choice(["heads"],["tails"])
 print(coin)
 ```
 
+obviously this is not good all the time and some could say using random along with the function is 
+helpful to read and just easy to categorize. 
 
-**random.randint(a, b)** provides a number between a and b, inclusive. 
+# APIS
+Application Programming Interface
+3rd party services that we write code to communicate to, many APIs live on the internet
 
+python has a package called "requests", this allows web requests from python code. 
 
-**random.shuffle(x)** takes a list of instances, and shuffles them
-
-
-
-
-# Statistics Library: 
-- Does things like mean, median and other statistics. 
-
-
-# Command - Line Arguments:
-- **sys** these are the commands specific to your system
-
-
-
-# Packages: 3rd Party Libraries
-users can install this on their own system.
-one of the location to download these packages are
-**pypi.org**
-
-**pip** is python's package manager that installs the packages for you 
+# JSON - Javascript Object NOtation

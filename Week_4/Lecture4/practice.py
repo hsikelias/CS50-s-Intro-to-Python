@@ -16,14 +16,5 @@ for card in cards:
 
 # statastics library
 print(
-    statistics.mean(
-        [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-        ]
-    )
+    statistics.mean([1,2,3,4,5,6,])
 )
