@@ -1,13 +1,18 @@
 import sys
+
 import inflect
 
-names = []
-# adieu = goodbye
-# assume user will enter at least one name
+p = inflect.engine()
 
-while True:
-    try:
-        Name = input("Name: ")
-        names += Name
-    except EOFError KeyboardInterrupt:
+names = []
+
+try:
+    Name = input("Name: ")
+    names.append(Name)
+except EOFError, KeyboardInterrupt:
+    if len(names) >= 1:
+        joined_words = p.join(names)
+        print(f"\n Adieu, adieu, to {joined_words}")
+        sys.exit()
+    else:
         sys.exit()
