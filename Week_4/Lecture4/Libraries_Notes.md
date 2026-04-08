@@ -5,36 +5,53 @@ Some common python built in moduels is "random"
 
 modules are accessible only after you **import** it. 
 
-
 # Random Library
 
 ```python
 import random # this is how u import a module
-
-
 random.choice([]) # choice function
 ```
 
 `random.choice(seq)`, seq is a parameter it can be a list of anything.
-
 
 you can also be more functional with from, by just using import (module name) you import everything.
 and also everytime you use the choice function you need to write `random.` something. 
 
 ```python
 from random import choice
-
 coin = choice(["heads"],["tails"])
 print(coin)
 ```
 
-obviously this is not good all the time and some could say using random along with the function is 
-helpful to read and just easy to categorize. 
+**random.randint(a, b)** provides a number between a and b, inclusive. 
 
-# APIS
-Application Programming Interface
-3rd party services that we write code to communicate to, many APIs live on the internet
+**random.shuffle(x)** takes a list of instances, and shuffles them
 
-python has a package called "requests", this allows web requests from python code. 
+# Statistics Library: 
+- Does things like mean, median and other statistics. 
 
-# JSON - Javascript Object NOtation
+# Command - Line Arguments:
+- **sys** these are the commands specific to your system
+
+# Packages: 3rd Party Libraries
+users can install this on their own system.
+one of the location to download these packages are
+**pypi.org**
+
+**pip** is python's package manager that installs the packages for you 
+
+
+# APIs
+This is not python specific, it's an application programming interface.. it is referred to the 3rd party services on the internet, we write code that conncets to the 3rd party API for our own use. You can do this by downloading a library called **requests**, which makes the HTTPs requests. 
+
+# JSON
+This is called JavaScript Object Notation, though it is JavaScript related it is a language
+agnostic program, meaning you could literally use any language to read and write Json fiels
+
+# Own Libraries
+
+You can maintain your own libraries, if you find a solution to a problem and there is similar pattern in a different project, you can use the same library again. 
+
+# __name__ 
+
+A special variable in python whos values are autotamitaclly value is set to be main
