@@ -3,7 +3,7 @@
 
 vowels = ["a","e","i","o","u","A","E","I","O","U"] #maybe use later
 output = ""
-full_word = input("Input: ") #first convert text to lower and then use that capitalize function, baes
+full_word = input("Input: ") #first convert 
 
 for letter in full_word:
   if letter in vowels:
@@ -11,8 +11,4 @@ for letter in full_word:
     new_word_temp = full_word[:vowel_position] + full_word[vowel_position + 1:] #new_word_temp = bes
     full_word = new_word_temp
 print(full_word, end="")
-
-# print(f"Output: {strippedWord}")
-# BUG: When more than one vowel it iterates and prints the word, if word is baes- first iteration: bes, second iteration bas, so first a is removed and then e. what i need to do is replace
-
 
